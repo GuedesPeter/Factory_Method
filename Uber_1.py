@@ -1,52 +1,40 @@
-from abc import ABC,abstractmethod
+from abc import ABC, abstractmethod
 
-class Veiculo(ABC):
-    def __init__(self,tipo):
-        self.veiculo = tipo
-    
+class Uber(ABC):
     @abstractmethod
-    def BuscarCliente(self):
-        pass
+    def solicitacao_cliente(self) -> None: pass
 
 
-class Moto(Veiculo):
-    def __init__(self,tipo,modelo,placa,cor):
-        super().__init__(tipo)
-        self.modelo = modelo
-        self.placa = placa
-        self.cor = cor
-    
-    def BuscarCliente(self):
-        print(f'|Moto: {self.modelo} - Placa: {self.placa} - Cor: {self.cor}| Buscando o cliente...')
+class UberBlack(Uber):
+    def solicitacao_cliente(self) -> None:
+        print('\033[1;35m|Uber Black|\033[m Está buscando o cliente...')
 
-class CarroPopular(Veiculo):
-    def __init__(self,tipo,modelo,placa,cor):
-        super().__init__(tipo)
-        self.modelo = modelo
-        self.placa = placa
-        self.cor = cor
 
-    def BuscarCliente(self):
-        print(f'|Carro: {self.modelo} - Placa: {self.placa} - Cor: {self.cor}| Buscando o cliente...')
+class UberX(Uber):
+    def solicitacao_cliente(self) -> None:
+        print('\033[1;33m|Uber-X|\033[m Está buscando o cliente...')
 
-class CarroLuxo(Veiculo):
-    def __init__(self,tipo,modelo,placa,cor):
-        super().__init__(tipo)
-        self.modelo = modelo
-        self.placa = placa
-        self.cor = cor
 
-    def BuscarCliente(self):
-        print(f'|Carro: {self.modelo} - Placa: {self.placa} - Cor: {self.cor}| Buscando o cliente...')
+class UberMoto(Uber):
+    def solicitacao_cliente(self) -> None:
+        print('\033[1;36m|Uber Moto|\033[m Está buscando o cliente...')
+
+
+class UberFlash(Uber):
+    def solicitacao_cliente(self) -> None:
+        print('\033[1;32m|Uber Flash|\033[m Realizando entrega para o cliente...')
+
 
 
 
 if __name__ == '__main__':
 
-    cliente1 = Moto('Honda','CG125','YAH7709','Vermelho')
-    cliente2 = CarroLuxo('Chevrolet','Camaro','ABC9911','Amarelo')
-    cliente3 = CarroPopular('Fiat','Uno','JJTP3368','Branco')
+    cliente1 = UberBlack()
+    cliente2 = UberX()
+    cliente3 = UberMoto()
+    cliente4 = UberFlash()
 
-    cliente1.BuscarCliente()
-    cliente2.BuscarCliente()
-    cliente3.BuscarCliente()
+    cliente1.solicitacao_cliente()
+    cliente2.solicitacao_cliente()
+    cliente3.solicitacao_cliente()
+    cliente4.solicitacao_cliente()
