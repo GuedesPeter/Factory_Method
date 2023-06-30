@@ -1,8 +1,9 @@
-# Factory Method - Um padrão de design para criar objetos
+ 
+<h1>🏭 Factory Method - Um padrão de design para criar objetos</h1> 
 
 O Factory Method é um padrão de design creacional que fornece uma abordagem para criar objetos em uma classe base, permitindo que as subclasses decidam qual objeto concreto criar. Esse padrão promove o princípio de design "programar para uma interface, não para uma implementação" e é amplamente utilizado em muitas linguagens de programação.
 
-## Quando usar o Factory Method?
+<h2>💡 Quando usar o Factory Method?</h2>
 
 O Factory Method é útil quando você tem uma classe base abstrata que define uma interface para criar objetos, mas deseja delegar a responsabilidade de criação para suas subclasses. Ele é útil quando:
 
@@ -12,7 +13,7 @@ O Factory Method é útil quando você tem uma classe base abstrata que define u
 
 3. Você deseja adicionar novos tipos de objetos sem modificar o código existente, seguindo o princípio do Open/Closed (aberto/fechado) do SOLID.
 
-## Estrutura - Componentes do Factory Method
+<h2>🧱 Estrutura - Componentes do Factory Method</h2>
 
 Existem geralmente quatro componentes principais no padrão Factory Method:
 
@@ -25,7 +26,7 @@ Existem geralmente quatro componentes principais no padrão Factory Method:
 4. **ConcreteCreator (Criador Concreto)**: Subclasse do Criador, que implementa o Factory Method para criar objetos específicos do Produto.
 
 
-# Relações com outros padrões
+<h2>🤝 Relações com outros padrões</h2>
 
 - Muitos projetos começam usando o Factory Method (menos complicado e mais customizável através de subclasses) e evoluem para o Abstract Factory, Prototype, ou Builder (mais flexíveis, mas mais complicados).
 
@@ -39,15 +40,17 @@ Existem geralmente quatro componentes principais no padrão Factory Method:
 
 
 
-# Prós 
-## Você evita acoplamentos firmes entre o criador e os produtos concretos.
- ## Princípio de responsabilidade única. 
+<h2>✅ Prós</h3>
+
+<h3>🟢 Você evita acoplamentos firmes entre o criador e os produtos concretos.</h3> 
+ <h3>🟢 Princípio de responsabilidade única. </h3>
  Você pode mover o código de criação do produto para um único local do programa, facilitando a manutenção do código.
- ## Princípio aberto/fechado. 
+<h3>🟢 Princípio aberto/fechado. </h3>
  Você pode introduzir novos tipos de produtos no programa sem quebrar o código cliente existente.
-# Contras
-## O código pode se tornar mais complicado.
-você precisa introduzir muitas subclasses novas para implementar o padrão. 
+<h2>🛑 Contras</h2>
+
+<h3>🔴 O código pode se tornar mais complicado.</h3>
+ Você precisa introduzir muitas subclasses novas para implementar o padrão. 
 
 O melhor cenário é quando você está introduzindo o padrão em uma hierarquia existente de classes criadoras.
 
@@ -61,9 +64,9 @@ O melhor cenário é quando você está introduzindo o padrão em uma hierarquia
 
 
 
+<hr>
+<h4> Colaboradores</h4>
 
-## Colaboradores
-
-<a href="https://github.com/ggramoss"><img src="https://github.com/ggramoss.png" width="45" height="45"></a> &nbsp;
-<a href="https://github.com/GuedesPeter"><img src="https://github.com/GuedesPeter.png" width="45" height="45"></a> &nbsp;
-<a href="https://github.com/TaizaReis"><img src="https://github.com/TaizaReis.png" width="45" height="45"></a> &nbsp;
+<a href="https://github.com/ggramoss"><img src="https://github.com/ggramoss.png" width="35" height="35" ></a> &nbsp;
+<a href="https://github.com/GuedesPeter"><img src="https://github.com/GuedesPeter.png" width="35" height="35"></a> &nbsp;
+<a href="https://github.com/TaizaReis"><img src="https://github.com/TaizaReis.png" width="35" height="35"></a> &nbsp;
