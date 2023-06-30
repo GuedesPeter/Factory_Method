@@ -12,7 +12,7 @@ O Factory Method é útil quando você tem uma classe base abstrata que define u
 
 3. Você deseja adicionar novos tipos de objetos sem modificar o código existente, seguindo o princípio do Open/Closed (aberto/fechado) do SOLID.
 
-## Componentes do Factory Method
+## Estrutura - Componentes do Factory Method
 
 Existem geralmente quatro componentes principais no padrão Factory Method:
 
@@ -24,6 +24,18 @@ Existem geralmente quatro componentes principais no padrão Factory Method:
 
 4. **ConcreteCreator (Criador Concreto)**: Subclasse do Criador, que implementa o Factory Method para criar objetos específicos do Produto.
 
+
+# Relações com outros padrões
+
+- Muitos projetos começam usando o Factory Method (menos complicado e mais customizável através de subclasses) e evoluem para o Abstract Factory, Prototype, ou Builder (mais flexíveis, mas mais complicados).
+
+- Classes Abstract Factory são quase sempre baseadas em um conjunto de métodos fábrica, mas você também pode usar o Prototype para compor métodos dessas classes.
+
+- Você pode usar o Factory Method junto com o Iterator para permitir que uma coleção de subclasses retornem diferentes tipos de iteradores que são compatíveis com as coleções.
+
+- O Prototype não é baseado em heranças, então ele não tem os inconvenientes dela. Por outro lado, o Prototype precisa de uma inicialização complicada do objeto clonado. O Factory Method é baseado em herança mas não precisa de uma etapa de inicialização.
+
+- O Factory Method é uma especialização do Template Method. Ao mesmo tempo, o Factory Method pode servir como uma etapa em um Template Method grande.
 
 
 
