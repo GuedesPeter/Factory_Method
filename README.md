@@ -54,7 +54,7 @@ Existem geralmente quatro componentes principais no padrão Factory Method:
 
 O melhor cenário é quando você está introduzindo o padrão em uma hierarquia existente de classes criadoras.
 
-<h1>🤔 Conclusão</h1>
+<h1>🤔 Em resumo...</h1>
 
 O **Factory Method** flexibiliza criação de objetos, permitindo trabalhar com interfaces ao invés de classes concretas.
 Este padrão facilita a manutenção, extensibilidade e reutilização de código.
